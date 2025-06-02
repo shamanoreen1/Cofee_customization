@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "public",
+    "public": "coffee-horizon-frontend/build",
     "ignore": [
       "firebase.json",
       "**/.*",
