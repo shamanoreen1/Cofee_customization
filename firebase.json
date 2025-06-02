@@ -6,7 +6,12 @@
       "**/.*",
       "**/node_modules/**"
     ],
+    "cleanUrls": true,
     "rewrites": [
+      {
+        "source": "/images/**",
+        "destination": "/images/"
+      },
       {
         "source": "**",
         "destination": "/index.html"

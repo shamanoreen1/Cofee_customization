@@ -135,6 +135,273 @@
         </div>
     </footer>
 
-    <script src="table.js"></script>
+<style>
+/* Header Container */
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #1f1f1f;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    padding: 15px 20px;
+}
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Logo Section */
+.logo {
+    color: #FFD700;
+}
+
+.logo h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+.logo .tagline {
+    font-size: 14px;
+    color: #ffffff;
+    margin: 0;
+}
+
+/* Navigation Menu */
+.nav-menu ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.nav-menu ul li {
+    display: inline-block;
+}
+
+.nav-menu ul li a {
+    text-decoration: none;
+    color: #FFD700;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-menu ul li a:hover {
+    background-color: #FFD700;
+    color: #121212;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .header-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-menu ul li a {
+        margin: 5px 0;
+    }
+}
+
+/* General Styling */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: #1a1a1a;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* Booking Section */
+.booking-screen {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #2a2a2a, #1f1f1f);
+}
+
+.booking-header h2 {
+    font-size: 36px;
+    color: #FFD700;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.booking-header p {
+    color: #cccccc;
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+/* Booking Form */
+.booking-form {
+    max-width: 600px;
+    margin: 0 auto;
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-group label {
+    display: block;
+    font-size: 14px;
+    margin-bottom: 5px;
+    color: #FFD700;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #2a2a2a;
+    color: #ffffff;
+    font-size: 14px;
+}
+
+.form-group input::placeholder {
+    color: #aaaaaa;
+}
+
+.form-group input:focus {
+    outline: none;
+    border: 1px solid #FFD700;
+}
+
+/* Submit Button */
+.submit-btn {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #FFD700;
+    color: #121212;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.submit-btn:hover {
+    background: #ffcc00;
+    transform: scale(1.05);
+}
+      
+footer {
+    background-color: #1f1f1f;
+    color: #FFD700;
+    padding: 40px 20px 20px;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer-section {
+    flex: 1;
+    min-width: 250px;
+}
+
+.footer-section h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #FFD700;
+}
+
+.footer-section p {
+    font-size: 14px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin: 10px 0;
+}
+
+.footer-section ul li a {
+    text-decoration: none;
+    color: #FFD700;
+    font-size: 14px;
+}
+
+.footer-section ul li a:hover {
+    color: #ffaa00;
+}
+
+.social-icons a {
+    margin-right: 15px;
+    text-decoration: none;
+    color: #FFD700;
+    font-size: 18px;
+}
+
+.social-icons a:hover {
+    color: #ffffff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 14px;
+    border-top: 1px solid #FFD700;
+    padding-top: 10px;
+    color: #FFD700;
+}
+</style>
+
+<script>
+// Booking Form Validation
+document.getElementById('booking-form').addEventListener('submit', function (e) {
+    e.preventDefault(); // Prevent form submission
+
+    // Get form values
+    const name = document.getElementById('name').value.trim();
+    const email = document.getElementById('email').value.trim();
+    const phone = document.getElementById('phone').value.trim();
+    const date = document.getElementById('date').value;
+    const time = document.getElementById('time').value;
+    const guests = document.getElementById('guests').value.trim();
+
+    // Simple validation
+    if (!name || !email || !phone || !date || !time || !guests) {
+        alert('Please fill out all fields.');
+        return;
+    }
+
+    // Confirmation
+    alert(`Thank you, ${name}! Your table for ${guests} guest(s) has been reserved on ${date} at ${time}.`);
+    document.getElementById('booking-form').reset(); // Reset the form
+});
+</script>
+
+<script src="table.js"></script>
 </body>
 </html>
