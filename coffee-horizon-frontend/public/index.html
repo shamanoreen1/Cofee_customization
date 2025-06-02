@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COffee Horizon</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: #ffffff;
+        }
+
+       /* header {
+            position: sticky; /* Makes the header sticky */
+           /*   top: 0; /* Sticks the header to the top of the page */
+          /*  background-color: #121212; /* Background color to distinguish it */
+         /*   padding: 20px;
+            text-align: center;
+            z-index: 1000; /* Ensures it stays above other content */
+          /*  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Optional: Adds a shadow for depth */
+       /* }    */
+
+       
+    /* Header Container */
+    header {
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        background-color: #1f1f1f;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        padding: 15px 20px;
+    }
+
+    .header-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    /* Logo Section */
+    .logo {
+        color: #FFD700;
+    }
+
+    .logo h1 {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .logo .tagline {
+        font-size: 14px;
+        color: #ffffff;
+        margin: 0;
+    }
+
+    /* Navigation Menu */
+    .nav-menu ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        gap: 20px;
+    }
+
+    .nav-menu ul li {
+        display: inline-block;
+    }
+
+    .nav-menu ul li a {
+        text-decoration: none;
+        color: #FFD700;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 15px;
+        border-radius: 5px;
+        transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    .nav-menu ul li a:hover {
+        background-color: #FFD700;
+        color: #121212;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .header-container {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav-menu ul {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .nav-menu ul li a {
+            margin: 5px 0;
+        }
+    }
+
+
+
+
+       
+
+         /* Coffee Info Section */
+         .coffee-info {
+            width: 90%;
+            margin: 20px auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .coffee-card {
+            background-color: #1f1f1f;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+            text-align: center;
+            padding: 15px;
+        }
+
+        .coffee-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+        }
+
+        .coffee-card h3 {
+            color: #FFD700;
+            margin: 10px 0;
+        }
+
+          /* Hero Section */
+          .hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url("coffee\ beans.png") no-repeat center center/cover;
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Hero Overlay */
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 1;
+        }
+
+        .hero-content {
+            z-index: 2;
+            color: #fff;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero h1 {
+            font-size: 60px;
+            margin: 0;
+            color: #FFD700;
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            animation: fadeIn 2s ease-in-out;
+        }
+
+        .hero p {
+            font-size: 22px;
+            color: #e0e0e0;
+            margin: 20px 0;
+            animation: fadeIn 3s ease-in-out;
+        }
+
+        .hero button {
+            text-decoration: none;
+            padding: 15px 30px;
+            font-size: 18px;
+            border: none;
+            border-radius: 25px;
+            background: #FFD700;
+            color: #121212;
+            cursor: pointer;
+            font-weight: bold;
+            text-transform: uppercase;
+            transition: background 0.3s ease, transform 0.3s ease;
+            animation: fadeIn 4s ease-in-out;
+        }
+        .hero button a{
+            text-decoration: none;
+            color: #121212;
+        }
+        .hero button a:hover {
+            color: green;
+        }
+
+        .hero button:hover {
+            color: red;
+            background: #ffcc00;
+            transform: scale(1.1);
+        }
+        .button{
+            display: flex;
+            justify-content: space-evenly;
+            
+            
+        }
+
+        /* Keyframe Animations */
+        @keyframes fadeIn {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Mobile Responsiveness */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 48px;
+            }
+
+            .hero p {
+                font-size: 18px;
+            }
+
+            .hero button {
+                font-size: 16px;
+                padding: 12px 25px;
+            }
+        }
+
+        .cus {
+            background-color: #6f4e37;
+            text-align: center;
+            color: white;
+            padding: 20px;
+            margin: 0;
+        }
+
+       /*  .customizer {
+            margin: 40px auto;
+           /* margin-left: 20px;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7);
+          /*  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            width: 80%;
+            max-width: 500px;
+        }
+
+        label {
+            color: #FFD700;
+            font-size: 16px;
+            margin-top: 10px;
+            display: block;
+            text-align: left;
+        }
+
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        button {
+            background-color: #6f4e37;
+            color: white;
+            border: none;
+            padding: 12px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #543629;
+        }
+
+        .summary {
+            margin-top: 20px;
+            padding: 15px;
+            color: #543629;;
+            background-color: #fff4e1;
+            border: 1px solid #ebd8c3;
+            border-radius: 10px;
+            text-align: left;
+        }
+
+        .summary h2 {
+            font-size: 20px;
+            color: #6f4e37;
+        }
+
+        .summary p {
+            font-size: 16px;
+            margin: 5px 0;
+        } */
+        
+        
+    footer {
+        background-color: #1f1f1f;
+        color: #FFD700;
+        padding: 40px 20px 20px;
+    }
+
+    .footer-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .footer-section {
+        flex: 1;
+        min-width: 250px;
+    }
+
+    .footer-section h3 {
+        font-size: 20px;
+        margin-bottom: 15px;
+        color: #FFD700;
+    }
+
+    .footer-section p {
+        font-size: 14px;
+        line-height: 1.6;
+        color: #ffffff;
+    }
+
+    .footer-section ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .footer-section ul li {
+        margin: 10px 0;
+    }
+
+    .footer-section ul li a {
+        text-decoration: none;
+        color: #FFD700;
+        font-size: 14px;
+    }
+
+    .footer-section ul li a:hover {
+        color: #ffaa00;
+    }
+
+    .social-icons a {
+        margin-right: 15px;
+        text-decoration: none;
+        color: #FFD700;
+        font-size: 18px;
+    }
+
+    .social-icons a:hover {
+        color: #ffffff;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        margin-top: 20px;
+        font-size: 14px;
+        border-top: 1px solid #FFD700;
+        padding-top: 10px;
+        color: #FFD700;
+    }
+
+
+    </style>
+</head>
+<body>
+  <!--  <header>
+        <h1>Coffee Horizon</h1>
+        <p>Sip the Goodness, Taste the Adventure</p>
+    </header> -->
+
+    <header>
+        <div class="header-container">
+            <!-- Logo and Tagline -->
+            <div class="logo">
+                <h1>Coffee Horizon</h1>
+                <p class="tagline">Sip the Goodness, Taste the Adventure</p>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="table.html">Book a Table</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+ <!--
+   <main>
+        <div class="carousel-container">
+            <div class="carousel">
+                <div class="slide">
+                    <img src="espresso.jpg" alt="Espresso">
+                    <h2>Espresso</h2>
+                    <p>3.5$</p>
+                    <p>Rich and bold Espresso shot</p>
+                </div>
+                <div class="slide">
+                    <img src="iced latte.png" alt="IcedLatte">
+                    <h2>Iced Latte</h2>
+                    <p>4.5$</p>
+                    <p>Creamy steamed milk with a shot of Espresso</p>
+                </div>
+                <div class="slide">
+                    <img src="cappuccino.jpg" alt="Cappuccino">
+                    <h2>Cappuccino</h2>
+                    <p>4.0$</p>
+                    <p>Espresso, steamed milk, and a layer of foam</p>
+                </div>
+            </div>
+        </div> -->
+           
+       <!-- <h1 class="cus">Coffee Customizer</h1>
+        <div class="customizer">
+            <label for="coffee-type">Choose Your Coffee</label>
+            <select id="coffee-type">
+                <option value="Espresso">Espresso</option>
+                <option value="Latte">Latte</option>
+                <option value="Cappuccino">Cappuccino</option>
+                <option value="Americano">Americano</option>
+                <option value="Mocha">Mocha</option>
+            </select>
+    
+            <label for="milk">Select Milk Type</label>
+            <select id="milk">
+                <option value="Whole Milk">Whole Milk</option>
+                <option value="Almond Milk">Almond Milk</option>
+                <option value="Soy Milk">Soy Milk</option>
+                <option value="Oat Milk">Oat Milk</option>
+                <option value="No Milk">No Milk</option>
+            </select>
+    
+            <label for="size">Select Size</label>
+            <select id="size">
+                <option value="Small">Small</option>
+                <option value="Medium">Medium</option>
+                <option value="Large">Large</option>
+            </select>
+    
+            <label for="sweetness">Sweetness Level</label>
+            <select id="sweetness">
+                <option value="No Sugar">No Sugar</option>
+                <option value="1 tsp">1 tsp</option>
+                <option value="2 tsp">2 tsp</option>
+                <option value="3 tsp">3 tsp</option>
+                <option value="4 tsp">4 tsp</option>
+            </select>
+    
+            <button onclick="customizeCoffee()">See Your Coffee</button>
+    
+            <div class="summary" id="summary" style="display: none;">
+                <h2>Your Coffee Summary:</h2>
+                <p id="coffee-summary"></p>
+            </div>
+        </div>
+         <!--  <section class="coffee-info">
+            <div class="coffee-card">
+                <img src="Mocha.jpg" alt="Mocha">
+                <h3>Mocha</h3>
+                <p>5.0$</p>
+                <p>A perfect blend of espresso, chocolate, and steamed milk.</p>
+            </div>
+            <div class="coffee-card">
+                <img src="Americano.jpg" alt="Americano">
+                <h3>Americano</h3>
+                <p>3.0$</p>
+                <p>Espresso mixed with hot water for a rich, smooth taste.</p>
+            </div>
+            <div class="coffee-card">
+                <img src="Macchiato.jpg" alt="Macchiato">
+                <h3>Caramel Macchiato</h3>
+                <p>4.0$</p>
+                <p>Espresso topped with a small amount of milk foam.</p>
+            </div>
+            <div class="coffee-card">
+                <img src="flat-white.jpg" alt="Flat White">
+                <h3>Flat White</h3>
+                <p>4.5$</p>
+                <p>Espresso with velvety steamed milk for a creamy texture.</p>
+            </div>
+        </section>
+
+    
+        
+    </main> 
+     <!-- Hero Section -->
+     <section class="hero">
+        <div class="hero-content">
+            <h1>Welcome to Coffee Horizon</h1>
+            <p>Your daily dose of happiness brewed to perfection</p>
+            <div class="button">
+                <button onclick="scrollToAbout()"> <a href="discoverm.html">
+                Discover Your Coffee</button> </a>
+                <button onclick="scrollToAbout()"> <a href="custom.html">
+                    Customize  Your Coffee</button> </a>
+            </div>
+        </div>
+    </section>
+    
+   
+    <footer>
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section about">
+                <h3>About Coffee Horizon</h3>
+                <p>Your go-to destination for the finest coffee experiences. From rich espressos to creamy lattes, we serve perfection in every cup.</p>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="table.html">Book a Table</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            
+            <!-- Contact Section -->
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p><strong>Address:</strong> Fateh Pur, Layyah</p>
+                <p><strong>Phone:</strong> +92 9335305</p>
+                <p><strong>Email:</strong> info@CoffeeHorizon.com</p>
+            </div>
+    
+            <!-- Social Media Section -->
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    
+                    <a href="https://wa.me/+923091115305" target="_blank">
+                        <i class="fa-brands fa-square-whatsapp"></i>
+                      </a>
+                      
+
+                    <a href="https://www.facebook.com/profile.php?id=100075258150879&mibextid=ZbWKwL" target="_blank" title="Visit my profile">
+                        <i class="fa-brands fa-square-facebook"></i> 
+                      </a>
+                    
+                    <a href="https://www.instagram.com/hananabdul010/profilecard/?igsh=OXpmbzByeWtxZXZo" target="_blank" title="Visit my profile">
+                        <i class="fa-brands fa-square-instagram"></i> 
+                      </a>
+
+                    <a href="https://x.com/Honey_Malik00?t=ieMk77XU1fNBTVhJLh8Dvw&s=09" target="_blank" title="Visit my profile">
+                        <i class="fa-brands fa-square-x-twitter"></i> 
+                      </a>
+                    <a href="https://www.linkedin.com/in/abdul-hanan-a0515628a/" target="_blank" title="Visit my profile">
+                        <i class="fa-brands fa-linkedin"></i> 
+                      </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Coffee Horizon. All Rights Reserved. | Designed with ❤ by Coffee Enthusiasts</p>
+        </div>
+    </footer>
+    
+
+    <script>
+        const carousel = document.querySelector(".carousel");
+        let index = 0;
+
+        function slideCarousel() {
+            index++;
+            if (index >= carousel.children.length) {
+                index = 0; // Reset to the first slide when the last one is reached
+            }
+            carousel.style.transform = `translateX(-${index * 100}%)`; // Move to the next slide
+        }
+
+        setInterval(slideCarousel, 3000); // Automatically slide every 3 seconds
+
+        // Smooth Scroll to About Section
+        function scrollToAbout() {
+            window.location.href = "#about";  // Scrolls to the section with id="about"
+        }
+     
+        function customizeCoffee() {
+            // Get selected options
+            const coffeeType = document.getElementById("coffee-type").value;
+            const milkType = document.getElementById("milk").value;
+            const size = document.getElementById("size").value;
+            const sweetness = document.getElementById("sweetness").value;
+
+            // Create summary text
+            const summaryText = `
+                <strong>Coffee:</strong> ${coffeeType}<br>
+                <strong>Milk:</strong> ${milkType}<br>
+                <strong>Size:</strong> ${size}<br>
+                <strong>Sweetness:</strong> ${sweetness}
+            `;
+
+            // Display summary
+            const summaryDiv = document.getElementById("summary");
+            const coffeeSummary = document.getElementById("coffee-summary");
+            coffeeSummary.innerHTML = summaryText;
+            summaryDiv.style.display = "block";
+        }
+
+       
+    </script>
+</body>
+</html>
