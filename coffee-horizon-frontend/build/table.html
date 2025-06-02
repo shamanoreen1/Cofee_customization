@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Table</title>
+    <link rel="stylesheet" href="table.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <header>
+        <div class="header-container">
+            <!-- Logo and Tagline -->
+            <div class="logo">
+                <h1>Coffee Horizon</h1>
+                <p class="tagline">Sip the Goodness, Taste the Adventure</p>
+            </div>
+            
+            <!-- Navigation Menu -->
+            <nav class="nav-menu">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="table.html">Book a Table</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="booking-screen" id="book-table">
+        <div class="booking-header">
+            <h2>Reserve Your Spot</h2>
+            <p>Enjoy your coffee in a cozy ambiance. Book a table now!</p>
+        </div>
+
+        <form id="booking-form" class="booking-form">
+            <!-- Name -->
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" id="name" placeholder="Enter your name" required>
+            </div>
+
+            <!-- Email -->
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Enter your email" required>
+            </div>
+
+            <!-- Phone -->
+            <div class="form-group">
+                <label for="phone">Phone</label>
+                <input type="tel" id="phone" placeholder="Enter your phone number" required>
+            </div>
+
+            <!-- Date -->
+            <div class="form-group">
+                <label for="date">Reservation Date</label>
+                <input type="date" id="date" required>
+            </div>
+
+            <!-- Time -->
+            <div class="form-group">
+                <label for="time">Reservation Time</label>
+                <input type="time" id="time" required>
+            </div>
+
+            <!-- Guests -->
+            <div class="form-group">
+                <label for="guests">Number of Guests</label>
+                <input type="number" id="guests" placeholder="Enter number of guests" min="1" required>
+            </div>
+
+            <!-- Submit Button -->
+            <button type="submit" class="submit-btn">Book Table</button>
+        </form>
+    </section>
+    <footer>
+        <div class="footer-container">
+            <!-- About Section -->
+            <div class="footer-section about">
+                <h3>About Coffee Horizon</h3>
+                <p>Your go-to destination for the finest coffee experiences. From rich espressos to creamy lattes, we serve perfection in every cup.</p>
+            </div>
+    
+            <!-- Quick Links Section -->
+            <div class="footer-section links">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="table.html">Book a Table</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                </ul>
+            </div>
+    
+            <!-- Contact Section -->
+            <div class="footer-section contact">
+                <h3>Contact Us</h3>
+                <p><strong>Address:</strong> Fateh Pur, Layyah</p>
+                <p><strong>Phone:</strong> +92 9335305</p>
+                <p><strong>Email:</strong> info@CoffeeHorizon.com</p>
+            </div>
+    
+            <!-- Social Media Section -->
+            <div class="footer-section social">
+                <h3>Follow Us</h3>
+                <div class="social-icons">
+                    
+                    <a href="https://wa.me/+923091115305" target="_blank">
+                        <i class="fa-brands fa-square-whatsapp"></i>
+                      </a>
+                      
+
+                    <a href="https://www.facebook.com/profile.php?id=100075258150879&mibextid=ZbWKwL" target="_blank" title="Visit my profile">
+                        <i class="fa-brands fa-square-facebook"></i> 
+                      </a>
+                    
+                    <a href="https://www.instagram.com/hananabdul010/profilecard/?igsh=OXpmbzByeWtxZXZo" target="_blank" title="Visit my profile">
+                        <i class="fa-brands fa-square-instagram"></i> 
+                      </a>
+
+                    <a href="https://x.com/Honey_Malik00?t=ieMk77XU1fNBTVhJLh8Dvw&s=09" target="_blank" title="Visit my profile">
+                        <i class="fa-brands fa-square-x-twitter"></i> 
+                      </a>
+                    <a href="https://www.linkedin.com/in/abdul-hanan-a0515628a/" target="_blank" title="Visit my profile">
+                        <i class="fa-brands fa-linkedin"></i> 
+                      </a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Coffee Horizon. All Rights Reserved. | Designed with ❤ by Coffee Enthusiasts</p>
+        </div>
+    </footer>
+
+    <script src="table.js"></script>
+</body>
+</html>
